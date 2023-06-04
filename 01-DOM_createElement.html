@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script type="text/javascript">
+    // Accedo al div de root
+    const rootElement = document.getElementById("root");
+    // Creamos nuevo elemento
+    const element = document.createElement("div");
+    // le metemos contenido a element
+    element.textContent = "Hello world!";
+    // le agregamos clases a elemento
+    element.className = "container";
+
+    console.log(element);
+    // anadimos element a rootElement como hijo
+    rootElement.appendChild(element);
+  </script>
+</html>

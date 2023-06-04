@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script
+    crossorigin
+    src="https://unpkg.com/react@18/umd/react.development.js"
+  ></script>
+  <script
+    crossorigin
+    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+  ></script>
+
+  <script type="text/javascript">
+    const rootElement = document.getElementById("root");
+
+    const element = React.createElement("div", {
+      className: "container",
+      children: "Hello World",
+      id: "id",
+      style: {
+        color: "red",
+      },
+    });
+
+    //otra forma de llamar al children
+    const element2 = React.createElement(
+      "div",
+      {
+        className: "container",
+      },
+      "Hello 2"
+    );
+
+    //siempre es tipo(div) + propiedades(classname) o atributo + children (texto)
+    const parent = React.createElement(
+      "div",
+      { className: "container" },
+      element,
+      element2
+    );
+
+    //pintamos el element
+    ReactDOM.createRoot(rootElement).render(parent);
+  </script>
+</html>
